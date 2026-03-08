@@ -1,5 +1,9 @@
 <%- include("partials/header"); -%>
 
-<h1><%= postTitle %></h1>
-<p><%= postContent %></p>
+<article class="content-card">
+  <p class="eyebrow mb-2">Post</p>
+  <h1 class="mb-3"><%= postTitle %></h1>
+  <p class="mb-0"><%= postContent %></p>
+</article>
+
 <%- include("partials/footer"); -%>
