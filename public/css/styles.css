@@ -1,35 +1,116 @@
-.container-fluid {
-    padding-top: 70px;
-    padding-bottom: 70px;
-}
-.navbar {
-    padding-top: 15px;
-    padding-bottom: 15px;
-    border: 0;
-    border-radius: 0;
-    margin-bottom: 0;
-    font-size: 12px;
-    letter-spacing: 5px;
-}
-.navbar-nav  li a:hover {
-    color: #1abc9c !important;
+:root {
+  --bg: #0f172a;
+  --card: #111c34;
+  --card-soft: #1b2a4b;
+  --text: #e2e8f0;
+  --muted: #93a4bf;
+  --accent-a: #22d3ee;
+  --accent-b: #6366f1;
 }
 
-.footer-padding {
-	padding-bottom: 60px;
+body {
+  min-height: 100vh;
+  background: radial-gradient(circle at top, #1e293b, var(--bg) 40%);
+  color: var(--text);
+  font-family: "Inter", "Segoe UI", Roboto, sans-serif;
 }
 
-.footer {
-	position: absolute;
-	text-align: center;
-	bottom: 0;
-	width: 100%;
-	height: 60px;
-	background-color: #1abc9c;
+.app-navbar {
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(148, 163, 184, 0.2);
 }
 
-.footer p {
-	margin-top: 25px;
-	font-size: 12px;
-    color: #fff;
+.navbar-brand {
+  color: #fff;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.nav-link {
+  color: #cbd5e1;
+  transition: color 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+  color: var(--accent-a);
+}
+
+.hero-card,
+.content-card,
+.post-card,
+.empty-state {
+  background: linear-gradient(160deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.95));
+  border: 1px solid rgba(148, 163, 184, 0.18);
+  border-radius: 1rem;
+  padding: 1.75rem;
+  box-shadow: 0 15px 35px rgba(2, 6, 23, 0.25);
+}
+
+.eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-size: 0.75rem;
+  color: var(--accent-a);
+}
+
+.lead,
+p {
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.section-title {
+  font-size: 1.35rem;
+}
+
+.post-card h3 {
+  font-size: 1.3rem;
+}
+
+.read-more {
+  color: var(--accent-a);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.read-more:hover {
+  color: #67e8f9;
+}
+
+.btn-gradient {
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  background-image: linear-gradient(90deg, var(--accent-a), var(--accent-b));
+  padding: 0.65rem 1.1rem;
+}
+
+.btn-gradient:hover {
+  color: #fff;
+  filter: brightness(1.05);
+}
+
+.form-control {
+  background-color: var(--card-soft);
+  color: #fff;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.form-control:focus {
+  background-color: var(--card-soft);
+  color: #fff;
+  border-color: var(--accent-a);
+  box-shadow: 0 0 0 0.2rem rgba(34, 211, 238, 0.2);
+}
+
+.app-footer {
+  border-top: 1px solid rgba(148, 163, 184, 0.2);
+  margin-top: 3rem;
+  background: rgba(15, 23, 42, 0.75);
+}
+
+.app-footer p {
+  color: #cbd5e1;
 }

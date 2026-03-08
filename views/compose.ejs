@@ -1,13 +1,22 @@
 <%- include("partials/header"); -%>
-<h1>Compose</h1>
-<form action="/compose" method="post">
-    <div class="form-group">
-        <label>Title</label>
-        <input class= "form-control" type="text"name="postTitle">
-        <label>Post</label>
-        <textarea class= "form-control" name="postbody" rows="10" cols="30"></textarea>
+
+<section class="content-card">
+  <p class="eyebrow mb-2">Compose</p>
+  <h1 class="mb-4">Create a new post</h1>
+
+  <form action="/compose" method="post" class="row g-3">
+    <div class="col-12">
+      <label class="form-label" for="postTitle">Title</label>
+      <input class="form-control form-control-lg" id="postTitle" type="text" name="postTitle" required />
     </div>
-    <button  class = "btn btn-primary"type="submit" name="button">compose</button>
-</form>
+    <div class="col-12">
+      <label class="form-label" for="postBody">Post</label>
+      <textarea class="form-control" id="postBody" name="postbody" rows="10" required></textarea>
+    </div>
+    <div class="col-12">
+      <button class="btn btn-gradient" type="submit">Publish Post</button>
+    </div>
+  </form>
+</section>
 
 <%- include("partials/footer"); -%>
